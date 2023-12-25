@@ -1,0 +1,99 @@
+.HomePageFullBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+}
+
+.SectionBox {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.LogoBox {
+    width: 250px;
+}
+
+.tagLine {
+    font-size: 1.25rem;
+    text-align: center;
+    max-width: 400px;
+}
+
+.SliceBox {
+    text-align: center;
+    margin: 1rem 0;
+
+    .title {
+        font-weight: 800;
+        font-size: 1.5rem;
+    }
+
+    .Points {
+        margin: 0 2rem;
+    }
+}
+
+.ImageBox {
+    width: 300px;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-top: 3rem;
+
+    .image {
+        border-radius: 1rem;
+    }
+}
+
+.style01 {
+    background: linear-gradient(1deg, #058CC4, #0BCDFF 70%);
+}
+
+.style02 {
+    background: linear-gradient(1deg, orange, rgb(245, 183, 68) 70%);
+}
+
+.style03 {
+    background: linear-gradient(1deg, #72C840, #ACE156 70%);
+}
+
+.style04 {
+    background: linear-gradient(1deg, #FF646A, #FA8476 70%);
+}
+
+.socialLinksBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+
+    .linkAnchor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        flex-direction: column;
+
+        &:hover {
+            outline: 1px solid gray;
+            outline-offset: 0.5rem;
+            border-radius: 5px;
+        }
+
+    }
+}
+
+.line {
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
+    background: linear-gradient(1deg, #FF646A, #FA8476 70%);
+}

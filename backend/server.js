@@ -5,9 +5,25 @@ import dotenv from 'dotenv';
 import { logEvents } from "./middleware/logger.js";
 import errorHandler from "./middleware/errorHandler.js";
 import { __dirname } from './utils/dirname.js'
-import app from './app.js'
+import express from "express";
+const app = express()
+
+import cors from 'cors';
+import cookieParser from "cookie-parser";
+import { corsOptions } from "./config/corsOptions.js";
+import { logger } from "./middleware/logger.js";
+
+
+app.use(express.static('public'))
+app.use(cors(corsOptions))
+app.use(express.json())
+app.use(cookieParser())
+app.use(logger)
+
 
 dotenv.config()
+connectDb()
+
 
 import HomeRouter from './routers/homeRouter.js'
 import AuthRouter from './routers/authRouter.js'
@@ -32,7 +48,6 @@ app.all('*', (req, res) => {
 
 app.use(errorHandler)
 
-connectDb()
 
 mongoose.connection.once('open', () => {
     console.log("DataBase Connected")

@@ -8,6 +8,10 @@
 **Project Name:** Qfuel - Fuel Your Day  
 **Tagline:** "Fuel Your Day with Wisdom: Qfuel - Where Quotes Ignite Inspiration!"
 
+<p align="center">
+  <img src="https://github.com/PavanGuptaZ/Qfuel/assets/144094802/55b0ed7e-1f21-47f0-8584-072f474b8a0a" width="250">
+</p>
+
 **Introduction:**  
 Welcome to Qfuel, your daily source of inspiration! Qfuel is a unique platform designed to ignite your day with a burst of motivation, wisdom, and positivity. Our mission is to provide you with a daily dose of insightful quotes that fuel your mind and spirit.
 
@@ -30,7 +34,7 @@ Welcome to Qfuel, your daily source of inspiration! Qfuel is a unique platform d
 ## Installation
 Clone the repository to your local machine:
 ```bash
-git clone https://github.com/PavanGuptaZ/Qfuel
+git clone https://github.com/PavanGuptaZ/Qfuel.git
 ```
 
 ### Setup Environment keys
@@ -41,6 +45,7 @@ Create .env files in both the frontend and backend folders:
 -	ACCESS_TOKEN
 -	REFRESH_TOKEN
 add Frontend origin in - backend/config/allowed origin.js
+
 ````JavaScript
 const allowedOrigins = [
     'http://localhost:5173',
@@ -83,14 +88,20 @@ Check DATABASEURL and VITE_BACKEND_LINK in the respective .env files and update 
 1. **Home Page:**
     Contains information about the website, What We Offer, How Qfuel Works, Join the Qfuel Community, etc.
 
+![00](https://github.com/PavanGuptaZ/Qfuel/assets/144094802/1eec818f-653e-4def-bf64-118a8a4f37a1)
+
 2. **Register Page:**
     Allows users to register with the following requirements:
      - Name: One or two words, no extra spacing, between 5 to 30 characters.
      - Email: Minimum of 3 and a maximum of 40 characters, total 50.
      - Password: No spacing, at least one capital, one small letter, one number, and one special character from @, &, *, #, $, !, ?. Limit of 3 to 20 characters.
 
+![02](https://github.com/PavanGuptaZ/Qfuel/assets/144094802/5bca3d46-7d58-4fbe-b7e8-8c024618dc8f)
+
 3. **Login Page:**
     Allows users to log in with email and password, verified by the same regex code.
+
+![03](https://github.com/PavanGuptaZ/Qfuel/assets/144094802/051152fa-39d5-4762-a67b-47b6f7eeb145)
 
 4. **Page Not Found:**
     Standard page for 404 errors.
@@ -99,8 +110,12 @@ Check DATABASEURL and VITE_BACKEND_LINK in the respective .env files and update 
     Main page showing 3 random quotes with a "Load Again" button to fetch more quotes.
     Like button to appreciate and save quotes.
 
+![04](https://github.com/PavanGuptaZ/Qfuel/assets/144094802/f8ddd0b3-38cc-4dd5-8243-054ef7b7f22a)
+
 6. **Profile Page:**
     Displays user information (name, email) and liked quotes.
+
+![05](https://github.com/PavanGuptaZ/Qfuel/assets/144094802/e5b68b0b-ff49-4395-aed3-20326fb36aa7)
 
 ## React Query:
 
@@ -125,7 +140,7 @@ The entire project uses the Fetch API for network requests, and React Query (als
 -	Consider using a more secure and scalable database solution for future growth.
 ## GitHub and Netlify Links
 
-- **GitHub Link:** [GITHUB_LINK](your_github_link_here)
-- **Netlify Link:** [NETLIFY_LINK](your_netlify_link_here)
+- **GitHub Link:** [GITHUB_LINK](https://github.com/PavanGuptaZ/Qfuel)
+- **Netlify Link:** [NETLIFY_LINK_FRONTEND](https://qfuel.netlify.app)
 
 ---

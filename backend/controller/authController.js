@@ -45,16 +45,16 @@ const login = async (req, res) => {
         const refreshToken = jwt.sign({ email }, process.env.REFRESH_TOKEN, { expiresIn: '1d' })
         const accessToken = jwt.sign({ email }, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
         res.cookie(`REFRESH_TOKEN`, refreshToken, {
-            // sameSite: 'None',
+            sameSite: 'None',
             maxAge: 1 * 24 * 60 * 60 * 1000,
             httpOnly: true,
-            // secure: false,
+            secure: true,
         })
         res.cookie(`ACCESS_TOKEN`, accessToken, {
-            // sameSite: 'None',
+            sameSite: 'None',
             maxAge: 1 * 24 * 60 * 1000,
             httpOnly: true,
-            // secure: false,
+            secure: true,
         })
         delete isExist.password
         res.json({ status: "ok", user: { ...isExist } })
@@ -78,10 +78,10 @@ const refresh = async (req, res) => {
             delete user.password
             const accessToken = jwt.sign({ email: user.email }, process.env.ACCESS_TOKEN, { expiresIn: '1h' })
             res.cookie(`ACCESS_TOKEN`, accessToken, {
-                // sameSite: 'None',
+                sameSite: 'None',
                 maxAge: 1 * 24 * 60 * 1000,
                 httpOnly: true,
-                // secure: false,
+                secure: true,
             })
             res.status(200).json({ user })
         })

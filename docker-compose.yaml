@@ -1,0 +1,23 @@
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: qfuel-frontend
+    ports:
+      - 5173:80
+    networks:
+      - qfuel-network
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: qfuel-backend
+    ports:
+      - 3001:3000
+    networks:
+      - qfuel-network
+
+networks:
+  qfuel-network:  
+    driver: bridge

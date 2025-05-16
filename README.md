@@ -61,19 +61,26 @@ it is going to help on CORS
 ### ToRun
 Navigate to the frontend and backend folders in the terminal and run
 
-#### for frontend
-````bash
-  cd frontend
-  npm install
-  npm run dev
-````
+- with docker
+  ````bash
+  docker-compose up -d
+  ````
 
-#### for backend
-````bash
-  cd backend
-  npm install
-  npm run dev
-````
+-  without docker
+
+    Frontend
+    ````bash
+      cd frontend
+      npm install
+      npm run dev
+    ````
+
+    Backend
+    ````bash
+      cd backend
+      npm install
+      npm run dev
+    ````
 
 Check DATABASEURL and VITE_BACKEND_LINK in the respective .env files and update if necessary.
 

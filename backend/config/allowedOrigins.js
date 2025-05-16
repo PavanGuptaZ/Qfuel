@@ -1,4 +1,2 @@
-const allowedOrigins = [
-    'https://qfuel.netlify.app',
-]
-export default allowedOrigins
+const allowedOrigins = ["https://qfuel.netlify.app", "http://localhost:5173"];
+export default allowedOrigins;
